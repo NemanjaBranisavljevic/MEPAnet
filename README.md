@@ -120,5 +120,5 @@ For questions or feedback, please contact:
 
 - **Name**: Nemanja Branisavljevic
 - **Email**: nbranisavljevic@yahoo.com
-- **GitHub**: [Your GitHub Profile](https://github.com/NemanjaBranisavljevic)
+- **GitHub**: [My profile](https://github.com/NemanjaBranisavljevic)
 ```
