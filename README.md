@@ -1,4 +1,3 @@
-```markdown
 # EPANET API for MATLAB
 
 ## Overview
