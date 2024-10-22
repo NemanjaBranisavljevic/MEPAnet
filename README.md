@@ -1,3 +1,4 @@
+```markdown
 # EPANET API for MATLAB
 
 ## Overview
@@ -20,39 +21,58 @@ To use the EPANET API in MATLAB, follow these steps:
 
 1. **Download EPANET**: Ensure you have the latest version of EPANET installed on your system.
 2. **Add EPANET DLLs**: Place the EPANET DLL files in a directory accessible by MATLAB.
+3. **Set Up MATLAB Path**:
+   - Add the directory containing the EPANET API scripts to your MATLAB path:
+     ```matlab
+     addpath('path/to/epanet/api');
+     ```
 
 ## Getting Started
 
 To begin using the EPANET API:
 
-##  1. Initialize the EPANET engine:
+1. Initialize the EPANET engine:
+   ```matlab
+   ENopen('path/to/your/network.inp', 'output.rpt');
+   ```
 
-ENopen('path/to/your/network.inp', 'output.rpt') %Load the network data
+2. Load the network data:
+   ```matlab
+   ENread;
+   ```
 
-ENread %Run the simulation:
+3. Run the simulation:
+   ```matlab
+   ENsolveH;  % Hydraulic analysis
+   ENsolveQ;  % Quality analysis
+   ```
 
-ENsolveH  % Hydraulic analysis
+4. Retrieve results:
+   ```matlab
+   [nodeHead, nodeQuality] = ENgetNodeResults;
+   ```
 
-ENsolveQ  % Quality analysis
+5. Close the EPANET engine:
+   ```matlab
+   ENclose;
+   ```
 
+## API Functions
 
-[nodeHead, nodeQuality] = ENgetNodeResults %Retrieve results
+| Function                      | Description                                      |
+|-------------------------------|--------------------------------------------------|
+| `ENopen(filename, rptFile)`   | Opens an EPANET project file and report file.   |
+| `ENclose()`                   | Closes the EPANET engine.                        |
+| `ENread()`                    | Reads network data from the EPANET project file.|
+| `ENsolveH()`                  | Solves the hydraulic equations.                  |
+| `ENsolveQ()`                  | Solves the water quality equations.              |
+| `ENgetNodeResults()`          | Retrieves hydraulic and quality results for nodes.|
 
-ENclose %Close the EPANET engine
+## Examples
 
-API Functions
-Function	Description
-ENopen(filename, rptFile)	Opens an EPANET project file and report file.
-ENclose()	Closes the EPANET engine.
-ENread()	Reads network data from the EPANET project file.
-ENsolveH()	Solves the hydraulic equations.
-ENsolveQ()	Solves the water quality equations.
-ENgetNodeResults()	Retrieves hydraulic and quality results for nodes.
+### Example 1: Basic Network Simulation
 
-##Examples
-
-###Example 1: Basic Network Simulation
-
+```matlab
 % Initialize EPANET
 ENopen('example_network.inp', 'output.rpt');
 
@@ -71,9 +91,11 @@ ENclose;
 % Display results
 disp(nodeHead);
 disp(nodeQuality);
+```
 
-###Example 2: Modify Network Parameters
+### Example 2: Modify Network Parameters
 
+```matlab
 % Initialize EPANET
 ENopen('example_network.inp', 'output.rpt');
 
@@ -88,17 +110,21 @@ ENsolveH;
 
 % Close EPANET
 ENclose;
+```
 
+## Contributing
 
-##Contributing
 Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
 
-##License
+## License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-##Contact
+## Contact
+
 For questions or feedback, please contact:
 
-Name: Nemanja Branisavljevic
-Email: nbranisavljevic@yahoo.com
-GitHub: https://github.com/NemanjaBranisavljevic
+- **Name**: Your Name
+- **Email**: your.email@example.com
+- **GitHub**: Your GitHub Profile
+```
