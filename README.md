@@ -18,13 +18,8 @@ The EPANET API for MATLAB provides a set of functions to interface with the EPAN
 
 To use the EPANET API in MATLAB, follow these steps:
 
-1. **Download EPANET**: Ensure you have the latest version of EPANET installed on your system.
+1. **Download EPANET DLL**: Ensure you have the latest version of EPANET.
 2. **Add EPANET DLLs**: Place the EPANET DLL files in a directory accessible by MATLAB.
-3. **Set Up MATLAB Path**:
-   - Add the directory containing the EPANET API scripts to your MATLAB path:
-     ```matlab
-     addpath('path/to/epanet/api');
-     ```
 
 ## Getting Started
 
@@ -123,7 +118,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 For questions or feedback, please contact:
 
-- **Name**: Your Name
-- **Email**: your.email@example.com
-- **GitHub**: Your GitHub Profile
+- **Name**: Nemanja Branisavljevic
+- **Email**: nbranisavljevic@yahoo.com
+- **GitHub**: [Your GitHub Profile](https://github.com/NemanjaBranisavljevic)
 ```
